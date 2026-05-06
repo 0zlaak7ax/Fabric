@@ -35,6 +35,7 @@ func main() {
 	// Run the CLI application
 	if err := app.Run(os.Args); err != nil {
 		fmt.Fprintf(os.Stderr, "Error: %v\n", err)
-		os.Exit(1)
+		// Exit code 2 to distinguish application errors from initialization errors (exit code 1)
+		os.Exit(2)
 	}
 }
