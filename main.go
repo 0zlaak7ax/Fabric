@@ -21,6 +21,7 @@ func main() {
 	app.Version = version
 
 	// Set up the core fabric instance
+	// Note: NewFabric loads config from ~/.config/fabric by default
 	fabric, err := core.NewFabric()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error initializing Fabric: %v\n", err)
