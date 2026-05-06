@@ -22,6 +22,7 @@ func main() {
 
 	// Set up the core fabric instance
 	// Note: NewFabric loads config from ~/.config/fabric by default
+	// TODO: Consider supporting XDG_CONFIG_HOME for better Linux desktop compliance
 	fabric, err := core.NewFabric()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error initializing Fabric: %v\n", err)
