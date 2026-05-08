@@ -93,6 +93,7 @@ func (f *Fabric) LoadPatterns() error {
 func (f *Fabric) GetPattern(name string) (*Pattern, error) {
 	p, ok := f.Patterns[name]
 	if !ok {
+		// TODO: consider fuzzy matching here to suggest close pattern names
 		return nil, fmt.Errorf("pattern %q not found; use 'fabric --list' to see available patterns", name)
 	}
 	return p, nil
