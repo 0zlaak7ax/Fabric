@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"sort"
 )
 
 const (
@@ -103,5 +104,6 @@ func (f *Fabric) ListPatterns() []string {
 	for name := range f.Patterns {
 		names = append(names, name)
 	}
+	sort.Strings(names)
 	return names
 }
